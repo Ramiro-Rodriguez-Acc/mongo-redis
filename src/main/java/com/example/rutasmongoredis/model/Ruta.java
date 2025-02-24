@@ -1,8 +1,9 @@
 package com.example.rutasmongoredis.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.example.rutasmongoredis.model.dto.Interseccion;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -18,7 +19,6 @@ public class Ruta {
     private String origen;
     private String destino;
     private Long distancia;
-    @JsonIgnoreProperties("interesecciones")
-    private List<Ruta> interesecciones;
+    private List<Interseccion> interesecciones;
     private List<Incidente> incidentes;
 }
